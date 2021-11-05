@@ -1,0 +1,29 @@
+$head1: red;
+$head2: #FF0000;
+$body-background: white;
+$body-color: black;
+
+$body-bg: #333;
+$body-color:#FFFFFF;
+
+$card-bg:#222;
+
+$form-select-bg: orange;
+$link-decoration: none;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color:orange;
+  margin-bottom: 8px;
+}

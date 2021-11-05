@@ -1,21 +1,28 @@
-import logo from './logo.svg';
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import LootTableAccess from "./pages/Loot";
-import LootTableInsertion from "./pages/Loot";
+//import LootTableInsertion from "./pages/Loot";
 import Roll from "./pages/Roll";
 import FetchExample2 from "./pages/FetchExample2";
 import AxiosExample1 from "./pages/AxiosExample1";
 import Dashboard from "./pages/Dashboard";
+//import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import Navbar from "./pages/Navbar";
 
 import { useState, useEffect } from "react";
 
 function App() {
 	const [activeTab, setActiveTab] = useState("");
+	const title = "Welcome to the New Blog";
+	const likes = 50;
+	const link = "https://www.google.com"
   return (
     <div className="App">
+			{/*<Navbar />*/}
+
+
 <Router>
 		<header class="p-3 bg-dark text-white">
     <div class="container">
@@ -40,8 +47,8 @@ function App() {
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          {/*<button type="button" class="btn btn-outline-light me-2">Login</button>*/}
+          {/*<AmplifySignOut />*/}
         </div>
       </div>
     </div>
@@ -76,4 +83,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; //withAuthenticator(App);
