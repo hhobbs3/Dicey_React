@@ -1,7 +1,13 @@
-const useFetch = () => {
+import { useState, useEffect } from 'react';
+
+const useFetch = (url) => {
+    const [data, setData] = useState(null);
+    const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
+
     useEffect(() => {
         //setTimeout(() => { *content }, 1000);
-          fetch("http://localhost:8000/blogs")  // need to run following command npx json-server --watch data/db.json --port 8000 
+          fetch(url)  // need to run following command npx json-server --watch data/db.json --port 8000 
             .then(res => {      // get the response and put in json format
               if(!res.ok) {
                 throw Error("Could not fetch the data for blog content");
@@ -11,7 +17,7 @@ const useFetch = () => {
             })
             .then((data) => {  // get the data
               console.log(data);
-              setBlogs(data);
+              setData(data);
               setIsPending(false);
               setError(null);
             })
@@ -20,5 +26,9 @@ const useFetch = () => {
               setError(err.message);
               setIsPending(false);
             })
-      }, []);
+      }, [url]);
+
+      return { data, isPending, error}
 }
+
+export default useFetch;
