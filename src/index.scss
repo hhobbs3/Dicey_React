@@ -2,7 +2,7 @@ $head1: red;
 $head2: #FF0000;
 $body-background: white;
 $body-color: black;
-
+$primary_color: #3a6efc;
 $body-bg: #333;
 $body-color:#FFFFFF;
 
@@ -24,6 +24,70 @@ $link-decoration: none;
 }
 .blog-preview h2 {
   font-size: 20px;
-  color:orange;
+  color: $primary_color;
   margin-bottom: 8px;
+}
+
+.blog-preview a {
+  text-decoration: none;
+  color:white;
+}
+
+.blog-details div {
+  margin: 20px 0;
+}
+
+.blog-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* create new blog form */
+.blog-create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.blog-create label {
+  text-align: left;
+  display: block;
+}
+.blog-create h2 {
+  font-size: 20px;
+  color: $primary_color;
+  margin-bottom: 30px;
+}
+.blog-create input, .blog-create textarea, .blog-create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.blog-create button {
+  background: $primary_color;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: $primary_color;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+.blog-details button {
+  background: $primary_color;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }

@@ -1,16 +1,28 @@
 {
-    "blogs": [
-        {
-            "title": "My first blog",
-            "body": "A",
-            "author": "Mario",
-            "id": 1
-        },
-        {
-            "title": "Best Blog",
-            "body": "B",
-            "author": "John117",
-            "id": 2
-        }
-    ]
+  "blogs": [
+    {
+      "title": "My first blog",
+      "body": "A",
+      "author": "Mario",
+      "id": 1
+    },
+    {
+      "title": "It's a Good Day to Die",
+      "body": "Every day is a good day to die",
+      "author": "Crazy Horse",
+      "id": 3
+    },
+    {
+      "title": "Testing",
+      "body": "Always Testing",
+      "author": "Testinator",
+      "id": 4
+    },
+    {
+      "title": "Baa Baa Beige Sheep",
+      "body": "I've already been shorn",
+      "author": "Bald Sheep",
+      "id": 5
+    }
+  ]
 }

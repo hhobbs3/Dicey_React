@@ -12,6 +12,9 @@ import Dashboard from "./pages/Dashboard";
 import Navbar from "./pages/Navbar";
 
 import { useState, useEffect } from "react";
+import BlogDetails from "./pages/BlogDetails";
+import BlogCreate from "./pages/BlogCreate";
+import NotFound from "./pages/NotFound";
 
 function App() {
 	const [activeTab, setActiveTab] = useState("");
@@ -32,6 +35,7 @@ function App() {
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a class="nav-link px-2 text-secondary"><Link to="/">Home</Link></a></li>
+          <li><a class="nav-link px-2 text-white"><Link to="/new_blog">New Blog</Link></a></li>
           <li><a class="nav-link px-2 text-white"><Link to="/dashboard">Dashboard</Link></a></li>
           <li><a class="nav-link px-2 text-white"><Link to="/loot">Loot Insertion</Link></a></li>
 					<li><a class="nav-link px-2 text-white"><Link to="/roll">Roll</Link></a></li>
@@ -58,8 +62,11 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-				<Route path="/dashboard">
-          <Dashboard />
+        <Route exact path="/new_blog">
+          <BlogCreate />
+        </Route>
+				<Route path="/blogs/:id">
+          <BlogDetails />
         </Route>
         <Route path="/loot">
           <LootTableAccess />
@@ -76,7 +83,9 @@ function App() {
         <Route path="/axios_example_1">
           <AxiosExample1 />
         </Route>
-
+        <Route path="*">
+          <NotFound />
+        </Route>
       </Switch>
     </Router>
     </div>

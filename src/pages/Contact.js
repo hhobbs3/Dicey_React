@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 
 const Contact = () => {
@@ -23,7 +23,7 @@ const Contact = () => {
 	
 	return (
 		<>
-		<h1>Contact Me </h1>
+		<h1>Contact Me</h1>
 		<p>Appologies, I am no longer supporting this app. You will soon be redirected to Home.</p>
 		<h2>{timedMessage} {count} </h2>
 		</>
