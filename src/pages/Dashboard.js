@@ -1,6 +1,6 @@
 import Home from "./Home";
-import LootTableAccess from "./Loot";
-import LootTableInsertion from "./Loot";
+import LootInsert from "./LootInsert";
+import LootRoll from "./LootRoll";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Dashboard = () => {
@@ -29,7 +29,7 @@ const Dashboard = () => {
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="shopping-cart"></span>
-                  <Link to="/loot">Loot</Link>
+                  <Link to="/loot_roll">Loot</Link>
                 </a>
               </li>
               <li class="nav-item">
@@ -92,8 +92,8 @@ const Dashboard = () => {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/loot">
-        <LootTableAccess />
+      <Route path="/loot_roll">
+        <LootInsert />
       </Route>
     </Switch>
   </Router>

@@ -2,8 +2,7 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import LootTableAccess from "./pages/Loot";
-//import LootTableInsertion from "./pages/Loot";
+import LootInsert from "./pages/LootInsert";
 import Roll from "./pages/Roll";
 import FetchExample2 from "./pages/FetchExample2";
 import AxiosExample1 from "./pages/AxiosExample1";
@@ -15,6 +14,8 @@ import { useState, useEffect } from "react";
 import BlogDetails from "./pages/BlogDetails";
 import BlogCreate from "./pages/BlogCreate";
 import NotFound from "./pages/NotFound";
+import LootRoll from "./pages/LootRoll";
+import GraphQLExample from "./pages/graphQLExample";
 
 function App() {
 	const [activeTab, setActiveTab] = useState("");
@@ -37,10 +38,11 @@ function App() {
           <li><a class="nav-link px-2 text-secondary"><Link to="/">Home</Link></a></li>
           <li><a class="nav-link px-2 text-white"><Link to="/new_blog">New Blog</Link></a></li>
           <li><a class="nav-link px-2 text-white"><Link to="/dashboard">Dashboard</Link></a></li>
-          <li><a class="nav-link px-2 text-white"><Link to="/loot">Loot Insertion</Link></a></li>
+          <li><a class="nav-link px-2 text-white"><Link to="/loot_roll">Loot</Link></a></li>
 					<li><a class="nav-link px-2 text-white"><Link to="/roll">Roll</Link></a></li>
-					<li><a class="nav-link px-2 text-white"><Link to="/fetch_example_2">Fetch Example 2</Link></a></li>
-					<li><a class="nav-link px-2 text-white"><Link to="/axios_example_1">Axios Example 1</Link></a></li>
+          <li><a class="nav-link px-2 text-white"><Link to="/graphql_example_1">GraphQL Ex 1</Link></a></li>
+					<li><a class="nav-link px-2 text-white"><Link to="/fetch_example_2">Fetch Ex 2</Link></a></li>
+					<li><a class="nav-link px-2 text-white"><Link to="/axios_example_1">Axios Ex 1</Link></a></li>
 					<li><a class="nav-link px-2 text-white"><Link to="/contact">Contact Me</Link></a></li>
 					<li><a class="nav-link px-2 text-white">FAQs</a></li>
           <li><a class="nav-link px-2 text-white">About</a></li>
@@ -68,14 +70,20 @@ function App() {
 				<Route path="/blogs/:id">
           <BlogDetails />
         </Route>
-        <Route path="/loot">
-          <LootTableAccess />
+        <Route path="/loot_roll">
+          <LootRoll />
+        </Route>
+        <Route path="/loot_insert">
+          <LootInsert />
         </Route>
 				<Route path="/roll">
           <Roll />
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/graphql_example_1">
+          <GraphQLExample />
         </Route>
 				<Route path="/fetch_example_2">
           <FetchExample2 />

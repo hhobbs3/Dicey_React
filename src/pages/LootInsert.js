@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios'
 
 
-function LootTableInsertion () {
+function LootInsert () {
 
 	const [appState, setAppState] = useState({
 		loading: false,
@@ -23,11 +23,11 @@ function LootTableInsertion () {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [items, setItems] = useState([]);
 
-	const [challenge, setChallenge] = useState("0-4");
+	const [challenge, setChallenge] = useState("0_4");
 	const [treasure_type, setTreasureType] = useState("i");
 	const [probability_min_val, setProbMin] = useState(0);
 	const [probability_max_val, setProbMax] = useState(0);
-	const [coin_type, setCoinType] = useState("pp");
+	const [coin_type, setCoinType] = useState("cp");
 	const [coin_dice_number, setCoinDiceNumber] = useState(0);
 	const [coin_dice_size, setCoinDiceSize] = useState(0);
 	const [valuable_value, setValuableValue] = useState(0);
@@ -105,9 +105,9 @@ function LootTableInsertion () {
 			<div class="mb-3">
 			<label for="challenge" class="form-lable">Level Challenge :</label>
 			<select id="challenge" class="me-auto" name="challenge"  onClick={(e) => setChallenge(e.target.value)}>
-				<option value="0-4">0-4</option>
-				<option value="5-10">5-10</option>
-				<option value="11-16">11-16</option>
+				<option value="0_4">0-4</option>
+				<option value="5_10">5-10</option>
+				<option value="11_16">11-16</option>
 				<option value="17+">17+</option>
 			</select>
 			</div>
@@ -115,8 +115,8 @@ function LootTableInsertion () {
 			{/* Type */}
 			<label for="treasure_type" class="form-lable">Type :</label>
 			<select id="treasure_type" name="treasure_type" onClick={(e) => setTreasureType(e.target.value)}>
-				<option value="Inividual">Individual</option>
-				<option value="Hoard">Hoard</option>
+				<option value="i">Individual</option>
+				<option value="h">Hoard</option>
 			</select>
 			<br />
 
@@ -221,22 +221,10 @@ function LootTableInsertion () {
 			<input type="submit" />
 
 		</form>
-		<div>
-			<button class="col-lg-6 offset-lg-3 " onClick={handleGet}>Button</button>
-		</div>
 
 	</div>
 	</>
   );
 };
 
-export const LootTableAccess = () => {
-  return (
-      <>
-        <h1>Loot Table Access</h1>
-        <p>Add a little style!</p>
-      </>
-      );
-};
-
-export default LootTableInsertion;
+export default LootInsert;
